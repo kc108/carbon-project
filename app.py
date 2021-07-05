@@ -1,3 +1,5 @@
+
+# IMPORT DEPENDENCIES
 import requests
 from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -11,21 +13,22 @@ import time
 
 TIMEFMT = "%a, %d %b %Y %H:%M:%S +0000"
 
+# CREATE INSTANCE FOR SESSION to connect to DB
 db = SQLAlchemy()
 
+# Instantiates the app to use Flask and loads configuration
 def create_app():
     # Base app configuration
     #
     app = Flask(__name__)
+    # silent=true hides debugging info to hide keys
     app.config.from_pyfile('.env.py', silent=True)
 
-    # Basic DB configuration
-    #
+    # Basic DB configuration - uses config for postgresql
     db.init_app(app)
     db.create_all(app=app)
 
     # Configure our login manager for the app
-    #
     login_manager = LoginManager()
     login_manager.login_view = 'login'
     login_manager.init_app(app)
@@ -39,7 +42,7 @@ def create_app():
 
     return app
 
-
+# instantiating flask app
 app = create_app()
 
 #  PostgresSQL/SQLAlchemy classes for objects.
@@ -57,6 +60,7 @@ class GroundQuery(db.Model):
     city = db.Column(db.String(), nullable=False)
     results = db.Column(db.String(), nullable=False)
 
+    # constructor function stores these in the instance variable related to fields
     def __init__(self, email, miles, mpg, city, results):
         self.created = time.strftime(TIMEFMT, time.gmtime())
         self.email = email
@@ -82,10 +86,11 @@ class AirQuery(db.Model):
         self.airport_list = airport_list
         self.results = results
 
-
+    # helps with debug
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
+    #
     def list_airports(self):
         airports = self.airport_list[1:-1].split(',')
         airport_list = [airport.upper() for airport in airports]
@@ -98,6 +103,7 @@ class AirQuery(db.Model):
 
 
 # Class to hold User data
+# UserMixin used for authentication
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
 
@@ -116,6 +122,7 @@ class User(UserMixin, db.Model):
         self.passwd = generate_password_hash(password)
         self.token = token
 
+    # debugging purposes
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
@@ -206,7 +213,7 @@ def api_get_offsets():
         db.session.add(row)
         db.session.commit
 
-
+# test for zip code ?
 def api_list_offsets_by_zip(zipcode):
     url = 'https://api.cloverly.com/2019-03-beta/purchases/electricity'
     key = app.config['CLOVERLY_PUBLIC_KEY']
@@ -412,7 +419,7 @@ def list_offset():
         offsets = [off for off in offsets if off.offset_type == request.form['offset_type']]
     return render_template('offsets.html', offsets=offsets)
 
-
+# form element to get nearest one by zip
 # @app.route('/list_offset/<int:zipcode>', methods=['GET', 'POST'])
 # def list_offset(zipcode):
 #     offsets = api_list_offsets_by_zip(zipcode)
@@ -504,6 +511,7 @@ def edit_air_query(id):
 # Receives a JSON payload from a client.  Validates the token provided
 # matches a registered user, and creates the estimate which is stored
 # in the database for later use by that user.
+# this is for the user facing API, AAU have to give miles, mpg and token and returns the json results from cloverly
 @app.route('/api/ground_query', methods=('POST', 'GET'))
 def api_ground_query():
     request_data = json.loads(request.data)
