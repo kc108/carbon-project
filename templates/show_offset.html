@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ slug.name }} {% endblock %}</h2>
+    <hr>
+    <p>City: {{ slug.city }}</p>
+    <p>Province: {{ slug.province }}</p>
+    <p>Country: {{ slug.country }}</p>
+    <p>Type:   {{ slug.offset_type }}</p>
+    <p>TOTAL CAPACITY: {{ slug.total_capcity }}</p>
+    <p>AVAIL CAPACITY: {{ slug.available_carbon_in_kg }}kg</p>
+
+    <h3>Details</h3>
+    <hr>
+    {{ slug.technical_details }}
+    <hr>
+    <p><a href="{{ slug.pretty_url }}">Link to Offset</a></p>
+
+{% endblock %}

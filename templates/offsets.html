@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Available Offsets</h3>
+    <h4>Select an offset type to filter:</h4>
+    <form method="post">
+        <div class="form-group">
+            <label for="offset_type">Choose an Offset Type:</label>
+            <select id="offset_type" name="offset_type">
+                <option value="All">All</option>>
+                <option value="Solar">Solar</option>>
+                <option value="Wind">Wind</option>>
+                <option value="Reforestation">Reforestation</option>>
+                <option value="Biomass">Biomass</option>>
+                <option value="Livestock Gas Capture">Livestock Gas Capture</option>>
+                <option value="Landfill Gas Capture">Landfill Gas Capture</option>>
+                <option value="Energy Efficiency">Energy Efficiency</option>>
+                <option value="Marine Efficiency">Marine Efficiency</option>>
+                <option value="fFugitive Emissions Capture">Fugitive Emissions Capture</option>>
+                <option value="Waste Management Project">Waste Management Project</option>>
+                <option value="Improved Forest Management">Improved Forest Management</option>>
+                <option value="Avcon">Avcon</option>>
+                <option value="Urban Forestry">Urban Forestry</option>>
+                <option value="Ozone Depleting Substances">Ozone Depleting Substances</option>>
+                <option value="Industrial Process Emissions Reduction">Industrial Process Emissions Reduction</option>>
+                <option value="Blue Carbon">Blue Carbon</option>>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <ul>
+        {% for offset in offsets %}
+            <li><a href="{{ url_for('show_offset', slug=offset['slug']) }}">{{ offset['offset_name'] }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

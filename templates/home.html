@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
+    <h2>Ground Query History</h2>
+    <hr>
+    {% for query in ground_queries %}
+        <a href="{{ url_for('show_ground_query', query_id=query['id']) }}">
+            <h4>{{ query.city }}: {{query.mpg}} MPG for {{query.miles}} miles</h4>
+            {{ query.created }}
+        <a href="{{ url_for('edit_ground_query', id=query.id) }}">
+            <span class="badge badge-warning">Edit</span>
+        </a>
+        <a href="{{ url_for('delete_ground_query', id=query.id) }}">
+            <span class="badge badge-warning">Delete</span>
+        </a>
+
+        <hr>
+    {% endfor %}
+    <h2>Air Query History</h2>
+    <hr>
+    {% for query in air_queries %}
+        <a href="{{ url_for('show_air_query', query_id=query['id']) }}">
+            <h4>{{ query.list_airports() }}</h4>
+            {{ query.created }}
+        </a>
+        <a href="{{ url_for('edit_air_query', id=query.id) }}">
+            <span class="badge badge-warning">Edit</span>
+        </a>
+        <a href="{{ url_for('delete_air_query', id=query.id) }}">
+            <span class="badge badge-warning">Delete</span>
+        </a>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

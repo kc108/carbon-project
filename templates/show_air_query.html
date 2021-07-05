@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} Air Travel Estimate Results {% endblock %}</h2>
+    <p>Airports Visited: {{ query.list_airports() }}</p>
+    <p>Carbon Equivalent (kg): {{ result.equivalent_carbon_in_kg }}</p>
+    <p>Offset Cost: ${{ result.total_cost_in_usd_cents / 100 }}</p>
+    
+    <form method="GET" action="/list_offset">
+        <button class="button is-block is-info is-large is-fullwidth">Show Offsets</button>
+    </form>
+    <form method="GET" action="/home">
+        <button class="button is-block is-info is-large is-fullwidth">Go To Dashboard</button>
+    </form>
+
+{% endblock %}
+
+
+    <!-- <form method="POST" action="/list_offset/{{ query.offset_zip }}"> -->
