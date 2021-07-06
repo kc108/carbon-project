@@ -67,7 +67,6 @@ This would be a great B2B integration into a business trying to bring awareness 
 
 
 # Usage
-
 1. Create a new user by selecting the "New User" link from the navigation bar
 2. Enter name, email, and desired password
 3. When user is created, note the token string that is displayed - this can be used in making direct API calls to the app
