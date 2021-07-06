@@ -28,6 +28,8 @@ def create_app():
     db.init_app(app)
     db.create_all(app=app)
 
+    app.secret_key = "super secret key"
+
     # Configure our login manager for the app
     login_manager = LoginManager()
     login_manager.login_view = 'login'
