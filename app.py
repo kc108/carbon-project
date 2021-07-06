@@ -9,6 +9,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import json
 import time
+import os
 
 
 TIMEFMT = "%a, %d %b %Y %H:%M:%S +0000"
@@ -21,8 +22,16 @@ def create_app():
     # Base app configuration
     #
     app = Flask(__name__)
-    # silent=true hides debugging info to hide keys
-    app.config.from_pyfile('.env.py', silent=True)
+
+    use_env = os.environ.get("USEENV")
+    if(use_env):
+        app.config["CLOVERLY_PUBLIC_KEY"] = os.environ.get("CLOVERLY_PUBLIC_KEY")
+        app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+        app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = os.environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
+        app.confif["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI")
+    else:
+        # silent=true hides debugging info to hide keys
+        app.config.from_pyfile('.env.py', silent=True)
 
     # Basic DB configuration - uses config for postgresql
     db.init_app(app)
@@ -48,7 +57,7 @@ def create_app():
 app = create_app()
 
 #  PostgresSQL/SQLAlchemy classes for objects.
-#
+
 
 # Class to hold Ground estimates
 class GroundQuery(db.Model):
