@@ -1,7 +1,8 @@
 {% extends 'nologin.html' %}
 
 {% block content %}
-<h1>{% block title %} Create a New User {% endblock %}</h1>
+<div id="show-bg show-bg-2">
+<h2>{% block title %} Create a New User {% endblock %}</h2>
 
 <form method="post">
     <div class="form-group">
@@ -27,4 +28,5 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
+</div>
 {% endblock %}

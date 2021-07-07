@@ -1,23 +1,18 @@
 {% extends "nologin.html" %}
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid">
-    <div class="column is-4 is-offset-4">
-        <h4 class="title">Login</h4>
-        <div class="box">
-            <form method="POST" action="/login">
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large login-border-radius" type="email" name="email" placeholder="Your Email" autofocus="">
-                    </div>
+<div class="column is-4 is-offset-4">
+    <h4 class="title login-title">Log In</h4>
+    <div class="box">
+        <form class="login-form" method="POST" action="/login">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large login-border-radius" type="email" name="email" placeholder="Your Email" autofocus="">
                 </div>
-
-
-<!--                <style>-->
-<!--                    #login-btn{background-color: #4424D6}-->
-<!--                </style>-->
-
-
+            </div>
+<!--<style>-->
+<!--    #login-btn{background-color: #4424D6}-->
+<!--</style>-->
             <div class="field">
                 <div class="control">
                     <input class="input is-large login-border-radius" type="password" name="pass" placeholder="Your Password">
@@ -25,14 +20,14 @@
             </div>
             <div class="field">
                 <label class="checkbox">
-                    <input type="checkbox" name="remember">
-                    Remember me
+                    <div class="rem-text">
+                        <input class="checkbox-login" type="checkbox" name="remember">
+                        Remember me
+                    </div>
                 </label>
-                <hr />
             </div>
-            <button id="login-btn" class="button btn btn-primary">Login</button>
+            <button id="login-btn" class="button btn btn-primary">Log In</button>
         </form>
     </div>
-</div>
 </div>
 {% endblock %}

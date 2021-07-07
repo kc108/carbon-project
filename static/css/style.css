@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+body.font {
+    font-family: 'Raleway', sans-serif;
+}
+
 h1 {
-    border: 2px #eee solid;
     color: brown;
     text-align: center;
     padding: 10px;
@@ -7,16 +12,59 @@ h1 {
 
 #login-btn {
     color: #fff;
+    background-color: #FC600A;
+    border-color: #FC600A;
+    color: white;
+}
+
+.login-title, .rem-text {
+    color:#B8D93F;
+}
+
+.checkbox-login {
+    margin-right: 25px;
     background-color: #4424D6;
-    border-color: #4424D6;
-    color: #4424D6;
 }
 
-.login-border-radius {
-    border-radius: 5px;
+.alert-border {
+    border-color: #FC600A;
 }
 
-
-#show-offsets-btn {
+#show-off-btn {
     background-color: #4424D6;
 }
+
+.navbar {
+    width: 100%;
+}
+
+body {
+    background-image: url("/static/css/images/geothermal.jpeg");
+    width: 80%;
+    height: 200px;
+    background-size: cover;
+    opacity: 95%;
+}
+
+.nolog-bg-img {
+    background-color: #110934;
+    border: solid #FC600A;
+    width: 100%;
+}
+
+.column {
+    padding: 25px;
+}
+
+.bg-light {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+

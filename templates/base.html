@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    <link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200" rel="stylesheet" type="text/css">
+
       <title>{% block title %} fdsgfdgdfg {% endblock %}</title>
   </head>
-  <body>
+  <body class="font">
+  <div class="style-nav">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('home')}}">CarbonKeep</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +37,9 @@
         </div>
       </nav>
     <div class="container">
+    </div>
         {% for message in get_flashed_messages() %}
-            <div class="alert alert-danger">{{ message }}</div>
+            <div id="alert-border" class="alert alert-danger">{{ message }}</div>
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
