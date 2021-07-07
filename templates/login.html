@@ -1,19 +1,26 @@
 {% extends "nologin.html" %}
 
 {% block content %}
-<div class="column is-4 is-offset-4">
-    <h3 class="title">Login</h3>
-    <div class="box">
-        <form method="POST" action="/login">
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+<div class="jumbotron jumbotron-fluid">
+    <div class="column is-4 is-offset-4">
+        <h4 class="title">Login</h4>
+        <div class="box">
+            <form method="POST" action="/login">
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large login-border-radius" type="email" name="email" placeholder="Your Email" autofocus="">
+                    </div>
                 </div>
-            </div>
+
+
+<!--                <style>-->
+<!--                    #login-btn{background-color: #4424D6}-->
+<!--                </style>-->
+
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="password" name="pass" placeholder="Your Password">
+                    <input class="input is-large login-border-radius" type="password" name="pass" placeholder="Your Password">
                 </div>
             </div>
             <div class="field">
@@ -21,9 +28,11 @@
                     <input type="checkbox" name="remember">
                     Remember me
                 </label>
+                <hr />
             </div>
-            <button class="button btn btn-primary is-block is-info is-large is-fullwidth">Login</button>
+            <button id="login-btn" class="button btn btn-primary">Login</button>
         </form>
     </div>
+</div>
 </div>
 {% endblock %}

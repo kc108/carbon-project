@@ -5,3 +5,18 @@ h1 {
     padding: 10px;
 }
 
+#login-btn {
+    color: #fff;
+    background-color: #4424D6;
+    border-color: #4424D6;
+    color: #4424D6;
+}
+
+.login-border-radius {
+    border-radius: 5px;
+}
+
+
+#show-offsets-btn {
+    background-color: #4424D6;
+}

@@ -21,7 +21,7 @@ db = SQLAlchemy()
 def create_app():
     # Base app configuration
     #
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="static")
 
     use_env = os.environ.get("USEENV")
     if(use_env):

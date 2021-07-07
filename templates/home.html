@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
-    <h2>Ground Query History</h2>
+    <h2>Vehicle Carbon Offset History</h2>
     <hr>
     {% for query in ground_queries %}
         <a href="{{ url_for('show_ground_query', query_id=query['id']) }}">
@@ -17,7 +17,7 @@
 
         <hr>
     {% endfor %}
-    <h2>Air Query History</h2>
+    <h2>Air Travel Offset History</h2>
     <hr>
     {% for query in air_queries %}
         <a href="{{ url_for('show_air_query', query_id=query['id']) }}">
