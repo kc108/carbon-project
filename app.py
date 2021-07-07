@@ -25,10 +25,12 @@ def create_app():
 
     use_env = os.environ.get("USEENV")
     if(use_env):
+        DEBUG = os.environ.get("DEBUG")
+        APP = os.environ.get("APP")
         app.config["CLOVERLY_PUBLIC_KEY"] = os.environ.get("CLOVERLY_PUBLIC_KEY")
         app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
         app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = os.environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
-        app.confif["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI")
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI")
     else:
         # silent=true hides debugging info to hide keys
         app.config.from_pyfile('.env.py', silent=True)
