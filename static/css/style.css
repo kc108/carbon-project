@@ -30,6 +30,13 @@ h1 {
     background-color: #4424D6;
 }
 
+
+
+button, input {
+    border-radius: 4px;
+}
+
+
 .alert-border {
     border-color: #FC600A;
 }
@@ -40,6 +47,23 @@ h1 {
 
 .navbar {
     width: 100%;
+}
+
+#navbar-color {
+    color: 110934;
+    font-weight: 800;
+}
+
+#navbar-bg {
+    border: ridge #FC600A;
+}
+
+.bg-light {
+    background-color: #B8D93F;
+}
+
+.form-control:focus {
+    border-color: #FC600A;
 }
 
 body {
@@ -54,6 +78,7 @@ body {
     background-color: #110934;
     border: solid #FC600A;
     width: 100%;
+    padding: 15px;
 }
 
 .column {
@@ -68,9 +93,29 @@ body {
     margin-top: 15px;
 }
 
+nav.navbar {
+    background-color: #D4E882;
+    opacity: 80%;
+}
+
+/* NEW USER*/
+.reg-title {
+    color: #B8D93F;
+    padding-top: 23px;
+}
 
 
+.new-user-btn {
+    color: #fff;
+    background-color: #FC600A;
+    border-color: #FC600A;
+    color: white;
+}
 
+.new-user-label {
+    color: #B8D93F;
+    font-weight: bolder;
+}
 
 
 

@@ -2,30 +2,31 @@
 
 {% block content %}
 <div id="show-bg show-bg-2">
-<h2>{% block title %} Create a New User {% endblock %}</h2>
+<h3 class="reg-title">{% block title %} Register Your Account {% endblock %}</h3>
+<hr />
 
 <form method="post">
     <div class="form-group">
-        <label for="full_name">Your Name</label>
+        <label class="new-user-label" for="full_name">Your Name</label>
         <input type="text" name="full_name" placeholder="Your name" class="form-control"
             value="{{ request.form['full_name'] }}"></input>
     </div>
 
     <div class="form-group">
-        <label for="email">Your Email</label>
+        <label class="new-user-label" for="email">Your Email</label>
         <input type="text" name="email" placeholder="Your email" class="form-control"
             value="{{ request.form['email'] }}"></input>
 
     </div>
     <div class="form-group">
-        <label for="pass">Password</label>
+        <label class="new-user-label" for="pass">Password</label>
         <input type="password" name="pass" placeholder="Password" class="form-control"
             value="{{ request.form['pass'] }}"></input>
     
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn new-user-btn">Submit</button>
     </div>
 </form>
 </div>
