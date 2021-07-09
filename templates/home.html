@@ -6,7 +6,7 @@
     <hr class="dashboard-line-break"/>
     <div class="content-dashboard">
         <h2 class="car-title-dashboard">Vehicle Carbon Offset History</h2>
-        <hr>
+        <hr class="dashboard-line-break car-break-line">
         {% for query in ground_queries %}
             <a href="{{ url_for('show_ground_query', query_id=query['id']) }}">
                 <h4>{{ query.city }}: {{query.mpg}} MPG for {{query.miles}} miles</h4>
@@ -18,12 +18,12 @@
                 <span class="badge badge-warning">Delete</span>
             </a>
 
-            <hr>
+            <hr class="dashboard-line-break">
 
     {% endfor %}
 
     <h2 class="aeroplane-title-dashboard">Air Travel Offset History</h2>
-    <hr>
+    <hr class="dashboard-line-break">
     {% for query in air_queries %}
         <a href="{{ url_for('show_air_query', query_id=query['id']) }}">
             <h4>{{ query.list_airports() }}</h4>
@@ -35,7 +35,7 @@
         <a href="{{ url_for('delete_air_query', id=query.id) }}">
             <span class="badge badge-warning">Delete</span>
         </a>
-        <hr>
+        <hr class="dashboard-line-break">
     </div>
     </a>
     </div>

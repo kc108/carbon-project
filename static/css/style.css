@@ -151,4 +151,13 @@ nav.navbar, #navbar-bg-base {
 }
 .content-dashboard {
     margin: 65px;
+    border: solid #B8D93F;
+    padding: 15px;
 }
+
+.dashboard-title {
+    color: #110934;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
