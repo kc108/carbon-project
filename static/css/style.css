@@ -146,7 +146,7 @@ nav.navbar, #navbar-bg-base {
 
 /* DASHBOARD STYLING */
 .car-title-dashboard, .aeroplane-title-dashboard {
-    color: #B8D93F;
+    color: #FC600A;
     font-weight: bold;
 }
 .content-dashboard {
@@ -159,5 +159,9 @@ nav.navbar, #navbar-bg-base {
     color: #110934;
     font-weight: bolder;
     font-size: 3rem;
+}
+
+.car-dashboard, .dashboard-aeroplane {
+    color: #B8D93F;
 }
 
