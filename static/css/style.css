@@ -24,7 +24,7 @@ h1 {
 
 /* LOG IN PAGE STYLING*/
 
-#login-btn, #show-off-btn {
+#login-btn, #show-off-btn, #aeroplane-submit-btn {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -112,13 +112,13 @@ nav.navbar, #navbar-bg-base {
     color: white;
 }
 
-.new-user-label {
+.new-user-label, .aeroplane-label {
     color: #B8D93F;
     font-weight: bolder;
 }
 
 /*VEHICLE OFFSET STYLING*/
-.ground-query-title {
+.ground-query-title, .aeroplane-title, .dashboard-title {
     color: #B8D93F;
     font-weight: bolder;
 }
@@ -128,7 +128,7 @@ nav.navbar, #navbar-bg-base {
     font-weight: bold;
 }
 
-.ground-container {
+.ground-container, .aeroplane-container, .dashboard-container {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 25px;
@@ -136,16 +136,16 @@ nav.navbar, #navbar-bg-base {
     margin: auto;
 }
 
-.ground-form-container {
+.ground-form-container, .aeroplane-form-container {
     margin: 25px;
 }
 
-.ground-line-break {
+.ground-line-break, .aeroplane-line-break {
     border-color: #B8D93F;
 }
 
-
-
-
-
-
+/* DASHBOARD STYLING */
+.car-title-dashboard, .aeroplane-title-dashboard {
+    color: #B8D93F;
+    font-weight: bold;
+}

@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Make An Air Query {% endblock %}</h1>
+<div class="aeroplane-container">
+<h1 class="aeroplane-title">{% block title %} Tell Us Where You Are Flying {% endblock %}</h1>
+<hr class="aeroplane-line-break" />
 
-<form method="post">
+<form class="aeroplane-form-container" method="post">
     <div class="form-group">
-        <label for="airports">Airports Visited</label>
-        <input type="text" name="airports" placeholder="Enter comma-separated list of airport codes" class="form-control"
+        <label class="aeroplane-label" for="airports">Enter Comma-separated List of Airport Codes</label>
+        <input type="text" name="airports" placeholder="Example:  SFO, KEF, LAX, SFO" class="form-control"
             value="{{ request.form['airports'] }}"></input>
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="aeroplane-submit-btn">Submit</button>
     </div>
 </form>
+</div>
 {% endblock %}
