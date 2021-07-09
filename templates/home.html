@@ -12,10 +12,10 @@
                 <h4 class="car-dashboard">{{ query.city }}: {{query.mpg}} MPG for {{query.miles}} miles</h4>
                 <div class="car-dashboard">{{ query.created }}</div>
             <a href="{{ url_for('edit_ground_query', id=query.id) }}">
-                <span class="badge badge-warning">Edit</span>
+                <button class="badge badge-warning" id="dash-btn1">Edit</button>
             </a>
             <a href="{{ url_for('delete_ground_query', id=query.id) }}">
-                <span class="badge badge-warning">Delete</span>
+                <button class="badge badge-warning" id="dash-btn2">Delete</button>
             </a>
 
             <hr class="dashboard-line-break">
@@ -29,11 +29,11 @@
             <h4 class="dashboard-aeroplane">{{ query.list_airports() }}</h4>
             <div class="dashboard-aeroplane">{{ query.created }}</div>
         </a>
-        <a href="{{ url_for('edit_air_query', id=query.id) }}">
-            <span class="badge badge-warning">Edit</span>
+        <a class="air-dashboard" href="{{ url_for('edit_air_query', id=query.id) }}">
+            <button class="badge badge-warning" id="dash-btn3">Edit</button>
         </a>
         <a href="{{ url_for('delete_air_query', id=query.id) }}">
-            <span class="badge badge-warning">Delete</span>
+            <button class="badge badge-warning" id="dash-btn4">Delete</button>
         </a>
         <hr class="dashboard-line-break">
     </div>
