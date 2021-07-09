@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    <link rel="stylesheet" href="/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200" rel="stylesheet" type="text/css">
 
-      <title>{% block title %} fdsgfdgdfg {% endblock %}</title>
+      <title>{% block title %} {% endblock %}</title>
   </head>
   <body class="font">
   <div class="style-nav">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('home')}}">CarbonKeep</a>
+      <nav id="navbar-bg-base" class="navbar navbar-expand-md navbar-light">
+        <a id="navbar-color-base" class="navbar-brand" href="{{ url_for('home')}}">CarbonKeep</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,10 +36,10 @@
             </ul>
         </div>
       </nav>
-    <div class="container">
+    <div id="center-login-base" class="container">
     </div>
         {% for message in get_flashed_messages() %}
-            <div id="alert-border" class="alert alert-danger">{{ message }}</div>
+            <div class="alert alert-dark">{{ message }}</div>
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
