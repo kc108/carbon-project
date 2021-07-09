@@ -149,3 +149,6 @@ nav.navbar, #navbar-bg-base {
     color: #B8D93F;
     font-weight: bold;
 }
+.content-dashboard {
+    margin: 65px;
+}
