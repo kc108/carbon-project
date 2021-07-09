@@ -165,3 +165,6 @@ nav.navbar, #navbar-bg-base {
     color: #B8D93F;
 }
 
+.dashboard-container {
+    margin-top: 150px;
+}
