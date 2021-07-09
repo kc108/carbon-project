@@ -140,7 +140,7 @@ nav.navbar, #navbar-bg-base {
     margin: 25px;
 }
 
-.ground-line-break, .aeroplane-line-break {
+.ground-line-break, .aeroplane-line-break, .dashboard-line-break {
     border-color: #B8D93F;
 }
 

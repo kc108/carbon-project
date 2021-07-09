@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="dashboard-title">{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
 <div class="dashboard-container">
+    <h1 class="dashboard-title">{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
+    <hr class="dashboard-line-break"/>
     <h2 class="car-title-dashboard">Vehicle Carbon Offset History</h2>
     <hr>
     {% for query in ground_queries %}
