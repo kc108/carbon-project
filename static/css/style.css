@@ -148,7 +148,8 @@ nav.navbar, #navbar-bg-base {
 
 .ground-form-container,
 .aeroplane-form-container,
-.edit-car-container
+.edit-car-container,
+.aeroplane-est-results-container
 {
     margin: 25px;
 }
@@ -159,7 +160,8 @@ nav.navbar, #navbar-bg-base {
 .line-break-available-offsets,
 .edit-line-break,
 .line-break-edit-aeroplane,
-.car-emission-results-line-break {
+.car-emission-results-line-break,
+.aeroplane-est-results-line-break {
     border-color: #B8D93F;
 }
 
@@ -206,7 +208,8 @@ nav.navbar, #navbar-bg-base {
 #dash-btn4,
 #edit-submit-car-btn,
 #car-carbon-show-offsets,
-#show-offsets-btn  {
+#show-offsets-btn,
+#aeroplane-est-show-offsets-btn {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -315,7 +318,8 @@ a.dashboard-aeroplane:hover {
 }
 
 
-.car-emission-results-container {
+.car-emission-results-container,
+.aeroplane-est-results-container {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 9px;

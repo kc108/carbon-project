@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2 class="aeroplane-emission-results-title">{% block title %} Estimated Carbon Emissions for Your Trip {% endblock %}</h2>
-    <p class="aeroplane-emission-results-destinations">Airports Visited: {{ query.list_airports() }}</p>
-    <p class="aeroplane-emission-results-carbon-emissions">Carbon Equivalent (kg): {{ result.equivalent_carbon_in_kg }}</p>
-    <p class="aeroplane-emission-results-offset-cost">Offset Cost: ${{ result.total_cost_in_usd_cents / 100 }}</p>
+<div class="aeroplane-est-results-container">
+    <h2 class="aeroplane-emission-results-title">{% block title %} Air Travel Estimated Carbon Results {% endblock %}</h2>
+    <hr class="aeroplane-est-results-line-break" />
+        <p class="aeroplane-emission-results-destinations">Airports Visited: {{ query.list_airports() }}</p>
+        <p class="aeroplane-emission-results-carbon-emissions">Carbon Equivalent (kg): {{ result.equivalent_carbon_in_kg }}</p>
+        <p class="aeroplane-emission-results-offset-cost">Offset Cost: ${{ result.total_cost_in_usd_cents / 100 }}</p>
+    <hr class="aeroplane-est-results-line-break" />
     
-    <form method="GET" action="/list_offset">
-        <button class="button is-block is-info is-large is-fullwidth">Show Offsets</button>
-    </form>
-    <form method="GET" action="/home">
-        <button class="button is-block is-info is-large is-fullwidth">Go To Dashboard</button>
-    </form>
-
+        <form method="GET" action="/list_offset">
+            <button class="btn is-primary" id="aeroplane-est-show-offsets-btn">Show Offsets</button>
+        </form>
+        <form method="GET" action="/home">
+            <button class="btn is-primary" id="aeroplane-est-show-offsets-btn">My Dashboard</button>
+        </form>
+</div>
 {% endblock %}
 
 
