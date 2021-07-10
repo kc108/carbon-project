@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %} Ground Travel Estimate Results {% endblock %}</h2>
+    <h2>{% block title %} Carbon Emission Results {% endblock %}</h2>
     <p>City: {{ query.city }}</p>
     <p>Miles Travelled: {{ query.miles }}</p>
     <p>MPG Entered:   {{ query.mpg }}</p>
@@ -9,7 +9,7 @@
     <p>Offset Cost:  ${{ result.total_cost_in_usd_cents / 100 }}</p>
 
     <form method="GET" action="/list_offset">
-        <button class="btn btn-primary ">Show Offsets</button>
+        <button id="car-carbon-show-offsets" class="btn btn-primary ">Show Offsets</button>
     </form>
     <form method="GET" action="/home">
         <div class="id="show-offsets-btn"><button class="button is-block is-info is-large is-fullwidth">Go To Dashboard</button></div>

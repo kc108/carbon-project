@@ -24,7 +24,7 @@ h1 {
 
 /* LOG IN PAGE STYLING*/
 
-#login-btn, #show-off-btn, #aeroplane-submit-btn {
+#login-btn, #show-off-btn, #aeroplane-submit-btn, #edit-submit-car-btn {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -39,8 +39,6 @@ h1 {
     margin-right: 25px;
     background-color: #4424D6;
 }
-
-
 
 button, input {
     border-radius: 4px;
@@ -170,7 +168,7 @@ nav.navbar, #navbar-bg-base {
     opacity: 90%;
 }
 
-.badge-warning, #dash-btn1, #dash-btn2, #dash-btn3, #dash-btn4  {
+.badge-warning, #dash-btn1, #dash-btn2, #dash-btn3, #dash-btn4, #edit-submit-car-btn, #car-carbon-show-offsets  {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -184,4 +182,28 @@ a.car-dashboard:hover {
 
 a.dashboard-aeroplane:hover {
     color: #FC600A;
+}
+
+/* OFFSET LIST STYLING */
+#offset-type-list {
+    color: #B8D93F;
+    font-weight: bolder;
+    font-size: 1.15rem;
+}
+
+.offset-list {
+    color: #B8D93F;
+    font-weight: bolder;
+}
+
+.offset-list-title {
+    font-size: 4rem;
+}
+
+#offset_type {
+    color: #110934;
+}
+
+#list-offset-type-container {
+   background-color: #4424D6;
 }

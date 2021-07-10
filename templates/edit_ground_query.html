@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Edit Ground Query {% endblock %}</h1>
+<h1>{% block title %} Edit Vehicle Carbon Offset History {% endblock %}</h1>
 
 <form method="post">
     <div class="form-group">
-        <label for="miles"># Miles</label>
+        <label for="miles">Miles</label>
         <input type="text" name="miles" placeholder="Miles" class="form-control"
             value="{{ request.form['miles'] or post['miles'] }}"></input>
     </div>
@@ -20,7 +20,7 @@
         <input type="text" name="city" placeholder="City" class="form-control" value="{{ request.form['city'] or post['city'] }}"></input>
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="edit-submit-car-btn" class="btn btn-primary" type="submit" >Submit</button>
     </div>
 </form>
 <hr>
