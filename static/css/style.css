@@ -23,8 +23,11 @@ h1 {
 }
 
 /* LOG IN PAGE STYLING*/
-
-#login-btn, #show-off-btn, #aeroplane-submit-btn, #edit-submit-car-btn {
+#login-btn,
+#show-off-btn,
+#aeroplane-submit-btn,
+#edit-submit-car-btn,
+#submit-avail-offsets {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -138,7 +141,7 @@ nav.navbar, #navbar-bg-base {
     margin: 25px;
 }
 
-.ground-line-break, .aeroplane-line-break, .dashboard-line-break {
+.ground-line-break, .aeroplane-line-break, .dashboard-line-break, .line-break-available-offsets {
     border-color: #B8D93F;
 }
 
@@ -189,6 +192,7 @@ a.dashboard-aeroplane:hover {
     color: #B8D93F;
     font-weight: bolder;
     font-size: 1.15rem;
+    padding-bottom: 15px;
 }
 
 .offset-list {
@@ -207,4 +211,17 @@ a.dashboard-aeroplane:hover {
 #list-offset-type-container {
    background-color: #4424D6;
     opacity: 95%;
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
 }
+
+.container-offsets-top-of-form {
+    margin: auto 45px;
+    padding-bottom: 5px;
+}
+
+.available-offset-list {
+    padding-bottom: 25px;
+}
+

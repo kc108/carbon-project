@@ -2,6 +2,7 @@
 
 {% block content %}
 <div id="list-offset-type-container">
+<div class="container-offsets-top-of-form">
     <h3 class="offset-list offset-list-title">Available Offsets</h3>
     <h4 class="offset-list">Select an offset type to filter:</h4>
     <form method="post">
@@ -30,14 +31,18 @@
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit-avail-offsets">Submit</button>
         </div>
     </form>
+    </div>
+    <hr class="line-break-available-offsets" />
+    <div class="available-offset-list">
     <ul>
         {% for offset in offsets %}
             <li><a id="offset-type-list" href="{{ url_for('show_offset', slug=offset['slug']) }}">{{ offset['offset_name'] }}</a></li>
         {% endfor %}
     </ul>
+    </div>
 </div>
 
 {% endblock %}
