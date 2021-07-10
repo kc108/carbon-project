@@ -309,7 +309,9 @@ a.dashboard-aeroplane:hover {
 .car-emission-results-kg,
 .car-emission-results-cost,
 .car-emission-results-btn-container2,
-.car-emission-results-btn-container3 {
+.car-emission-results-btn-container3, .aeroplane-emission-results-destinations,
+.aeroplane-emission-results-offset-cost,
+.aeroplane-emission-results-carbon-emissions {
     font-size: 1.13rem;
     line-height: 0.5em;
 }
