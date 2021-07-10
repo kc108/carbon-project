@@ -292,7 +292,13 @@ a.dashboard-aeroplane:hover {
 .car-emission-results-kg,
 .car-emission-results-cost,
 .car-emission-results-btn-container2,
-.car-emission-results-btn-container3 {
+.car-emission-results-btn-container3,
+.aeroplane-emission-results-title,
+.aeroplane-emission-results-destinations,
+.aeroplane-emission-results-carbon-emissions,
+.aeroplane-emission-results-offset-cost,
+.aeroplane-emission-results-show-offsets-btn1,
+.aeroplane-emission-results-show-offsets-btn2 {
     color: #B8D93F;
     margin: 33px;
 }
@@ -340,7 +346,12 @@ a.dashboard-aeroplane:hover {
     font-size: 2rem;
 }
 
-.car-emission-results-btn-container3 {
+.car-emission-results-btn-container3,
+#aeroplane-est-margin-container {
+    margin: 7px;
+}
+
+#aeroplane-est-margin-container {
     margin: 7px;
 }
 
