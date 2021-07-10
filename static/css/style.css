@@ -179,11 +179,18 @@ nav.navbar, #navbar-bg-base {
     color: #B8D93F;
     font-weight: bold;
 }
+
+.car-title-dashboard,
+.aeroplane-title-dashboard,
+.dashboard-entry-vehicle-section,
+.dashboard-entry-aeroplane-section {
+    margin: 23px;
+}
+
 .content-dashboard {
     margin: 65px;
     border: solid #B8D93F;
-    padding: 15px;
-}
+   }
 
 .dashboard-title {
     color: #110934;
