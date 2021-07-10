@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="edit-air-title">{% block title %} Edit Air Carbon Offset History {% endblock %}</h1>
-
-<form method="post">
-    <div class="form-group">
-        <label for="airports">Airports Visited</label>
-        <input type="text" name="airports" placeholder="Enter comma-separated list of airport codes" class="form-control"
-            value="{{ request.form['airport_list'] or post.text_airports() }}"></input>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
-<hr>
-<form action="{{ url_for('delete_air_query', id=post.id) }}" method="POST">
-    <input type="submit" value="Delete Estimate"
-            class="btn btn-danger btn-sm"
-            id="delete-est-btn"
-            onclick="return confirm('Are you sure you want to delete this estimate?')">
-</form>
+<div class="edit-aeroplane-container">
+    <h1 class="edit-air-title">{% block title %} Edit Air Carbon Offset History {% endblock %}</h1>
+    <hr class="line-break-edit-aeroplane" />
+        <form method="post">
+            <div class="form-group">
+                <label class="edit-aero-title" for="airports">Airports Visited</label>
+                <input type="text" name="airports" placeholder="Enter comma-separated list of airport codes" class="form-control"
+                    value="{{ request.form['airport_list'] or post.text_airports() }}"></input>
+            </div>
+            <div class="form-group">
+                <button id="edit-submit-aero-btn" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <form class="edit-pg-delete-btn-aeroplane" action="{{ url_for('delete_air_query', id=post.id) }}" method="POST">
+            <input type="submit" value="Delete Estimate"
+                    class="btn btn-danger"
+                    id="delete-est-btn-airplane"
+                    onclick="return confirm('Are you sure you want to delete this estimate?')">
+        </form>
+</div>
 {% endblock %}
 
