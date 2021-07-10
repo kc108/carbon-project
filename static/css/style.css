@@ -3,7 +3,6 @@
 body {
     background-image: url("/static/css/images/geothermal.jpeg");
     width: 100%;
-    height: 200px;
     background-size: cover;
     opacity: 95%;
 }
