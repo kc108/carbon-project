@@ -143,6 +143,7 @@ nav.navbar, #navbar-bg-base {
     width: 80%;
     min-width: 300px;
     margin: auto;
+    opacity: 95%;
 }
 
 .ground-form-container,
@@ -157,15 +158,22 @@ nav.navbar, #navbar-bg-base {
 .dashboard-line-break,
 .line-break-available-offsets,
 .edit-line-break,
-.line-break-edit-aeroplane {
+.line-break-edit-aeroplane,
+.car-emission-results-line-break {
     border-color: #B8D93F;
+}
+
+.car-emission-results-line-break,
+.car-emission-results-cost {
+    padding-bottom: 9px;
 }
 
 /* DASHBOARD STYLING */
 .car-title-dashboard,
 .aeroplane-title-dashboard,
 .edit-air-title,
-.edit-aero-title {
+.edit-aero-title,
+.car-emission-results-title {
     color: #B8D93F;
     font-weight: bold;
 }
@@ -181,7 +189,8 @@ nav.navbar, #navbar-bg-base {
     font-size: 3rem;
 }
 
-.car-dashboard, .dashboard-aeroplane {
+.car-dashboard,
+.dashboard-aeroplane {
     color: #B8D93F;
 }
 
@@ -190,7 +199,14 @@ nav.navbar, #navbar-bg-base {
     opacity: 90%;
 }
 
-.badge-warning, #dash-btn1, #dash-btn2, #dash-btn3, #dash-btn4, #edit-submit-car-btn, #car-carbon-show-offsets  {
+.badge-warning,
+#dash-btn1,
+#dash-btn2,
+#dash-btn3,
+#dash-btn4,
+#edit-submit-car-btn,
+#car-carbon-show-offsets,
+#show-offsets-btn  {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -265,4 +281,62 @@ a.dashboard-aeroplane:hover {
 }
 
 
+/* ESTIMATED VEHICLE CARBON EMISSIONS & OTHER DATA */
+.car-emission-results-title,
+.car-emission-results-city,
+.car-emission-results-miles,
+.car-emission-results-mpg,
+.car-emission-results-kg,
+.car-emission-results-cost,
+.car-emission-results-btn-container2,
+.car-emission-results-btn-container3 {
+    color: #B8D93F;
+    margin: 33px;
+}
+
+.car-emission-results-city,
+.car-emission-results-miles,
+.car-emission-results-mpg,
+.car-emission-results-kg,
+.car-emission-results-cost,
+.car-emission-results-btn-container2,
+.car-emission-results-btn-container3 {
+    font-size: 1.13rem;
+    line-height: 0.5em;
+}
+
+
 /* EDIT AIR CARBON OFFSET HISTORY */
+.aeroplane-emission-results-title,
+.aeroplane-emission-results-destinations,
+.aeroplane-emission-results-offset-cost,
+.aeroplane-emission-results-carbon-emissions {
+    color: #B8D93F;
+}
+
+
+.car-emission-results-container {
+    background-color: #4424D6;
+    padding-bottom: 25px;
+    padding-top: 9px;
+    width: 80%;
+    min-width: 300px;
+    margin: auto;
+    opacity: 95%;
+
+#car-carbon-show-offsets {
+    margin: 23px;
+}
+
+.car-emission-results-btn-container {
+    padding-top: 33px;
+}
+
+.test {
+    font-size: 2rem;
+}
+
+.car-emission-results-btn-container3 {
+    margin: 7px;
+}
+

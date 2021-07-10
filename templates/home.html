@@ -33,12 +33,12 @@
             <button class="badge badge-warning" id="dash-btn3">Edit</button>
         </a>
         <a href="{{ url_for('delete_air_query', id=query.id) }}">
-            <button class="badge badge-warning" id="dash-btn4">Delete</button>
+            <button class="badge" id="dash-btn4">Delete</button>
         </a>
-        <hr class="dashboard-line-break">
-    </div>
-    </a>
-    </div>
-    {% endfor %}
+            <hr class="dashboard-line-break">
+        </a>
 
+    {% endfor %}
+    </div>
+</div>
 {% endblock %}

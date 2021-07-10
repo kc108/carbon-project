@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %} Carbon Emission Results {% endblock %}</h2>
-    <p>City: {{ query.city }}</p>
-    <p>Miles Travelled: {{ query.miles }}</p>
-    <p>MPG Entered:   {{ query.mpg }}</p>
-    <p>Carbon Equivalent (kg):  {{ result.equivalent_carbon_in_kg }}</p>
-    <p>Offset Cost:  ${{ result.total_cost_in_usd_cents / 100 }}</p>
+<div class="car-emission-results-container">
+<div class="car-emission-results-container-margin">
+    <h2 class="car-emission-results-title">{% block title %} Carbon Emission Results {% endblock %}</h2>
+    <hr class="car-emission-results-line-break" />
+    <p class="car-emission-results-city"> Destination City:  {{ query.city }}</p>
+    <p class="car-emission-results-miles">Miles Travelled: {{ query.miles }}</p>
+    <p class="car-emission-results-mpg">MPG Entered:   {{ query.mpg }}</p>
+    <p class="car-emission-results-kg">Carbon Equivalent (kg):  {{ result.equivalent_carbon_in_kg }}</p>
+    <p class="car-emission-results-cost">Offset Cost:  ${{ result.total_cost_in_usd_cents / 100 }}</p>
+    <hr class="car-emission-results-line-break emission-result-line-break-spacing" />
 
-    <form method="GET" action="/list_offset">
+    <div class=""></div>
+    <form class="car-emission-results-btn-container3" method="GET" action="/list_offset">
         <button id="car-carbon-show-offsets" class="btn btn-primary ">Show Offsets</button>
     </form>
-    <form method="GET" action="/home">
-        <div class="id="show-offsets-btn"><button class="button is-block is-info is-large is-fullwidth">Go To Dashboard</button></div>
-    </form>
 
-
+    <div class="car-emission-results-btn-container">
+    <div class="car-emission-results-btn-container2">
+        <form method="GET" action="/home">
+            <div>
+                <button id="show-offsets-btn" class="btn btn-primary">My Dashboard</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    </div>
 {% endblock %}

@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %} Air Travel Estimate Results {% endblock %}</h2>
-    <p>Airports Visited: {{ query.list_airports() }}</p>
-    <p>Carbon Equivalent (kg): {{ result.equivalent_carbon_in_kg }}</p>
-    <p>Offset Cost: ${{ result.total_cost_in_usd_cents / 100 }}</p>
+    <h2 class="aeroplane-emission-results-title">{% block title %} Estimated Carbon Emissions for Your Trip {% endblock %}</h2>
+    <p class="aeroplane-emission-results-destinations">Airports Visited: {{ query.list_airports() }}</p>
+    <p class="aeroplane-emission-results-carbon-emissions">Carbon Equivalent (kg): {{ result.equivalent_carbon_in_kg }}</p>
+    <p class="aeroplane-emission-results-offset-cost">Offset Cost: ${{ result.total_cost_in_usd_cents / 100 }}</p>
     
     <form method="GET" action="/list_offset">
         <button class="button is-block is-info is-large is-fullwidth">Show Offsets</button>
