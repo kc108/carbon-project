@@ -1,33 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Edit Vehicle Carbon Offset History {% endblock %}</h1>
-
+<div class="edit-car-container">
+<h1 class="edit-car-title">{% block title %} Edit Vehicle Carbon Offset History {% endblock %}</h1>
+<hr class="edit-line-break" />
 <form method="post">
     <div class="form-group">
-        <label for="miles">Miles</label>
+        <label class="car-edit-form" for="miles">Miles</label>
         <input type="text" name="miles" placeholder="Miles" class="form-control"
             value="{{ request.form['miles'] or post['miles'] }}"></input>
     </div>
     
     <div class="form-group">
-        <label for="mpg">Miles Per Gallon</label>
+        <label class="car-edit-form" for="mpg">Miles Per Gallon</label>
         <input type="text" name="mpg" placeholder="MPG" class="form-control" value="{{ request.form['mpg'] or post['mpg'] }}"></input>
-    
+
     </div>
     <div class="form-group">
-        <label for="city">City Visited</label>
+        <label class="car-edit-form" for="city">City Visited</label>
         <input type="text" name="city" placeholder="City" class="form-control" value="{{ request.form['city'] or post['city'] }}"></input>
     </div>
     <div class="form-group">
         <button id="edit-submit-car-btn" class="btn btn-primary" type="submit" >Submit</button>
     </div>
 </form>
-<hr>
-<form action="{{ url_for('delete_ground_query', id=post.id) }}" method="POST">
+
+<form class="edit-pg-delete-btn" action="{{ url_for('delete_ground_query', id=post.id) }}" method="POST">
     <input type="submit" value="Delete Estimate"
-            class="btn btn-success btn-sm"
+            class="btn btn-success"
+            id="car-delete-edit-pg"
             onclick="return confirm('Are you sure you want to delete this estimate?')">
 </form>
+</div>
 {% endblock %}
 

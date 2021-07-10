@@ -27,7 +27,8 @@ h1 {
 #show-off-btn,
 #aeroplane-submit-btn,
 #edit-submit-car-btn,
-#submit-avail-offsets {
+#submit-avail-offsets,
+#car-delete-edit-pg {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -129,19 +130,30 @@ nav.navbar, #navbar-bg-base {
     font-weight: bold;
 }
 
-.ground-container, .aeroplane-container, .dashboard-container {
+.ground-container,
+.aeroplane-container,
+.dashboard-container,
+.edit-car-container {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 25px;
     width: 80%;
+    min-width: 300px;
     margin: auto;
 }
 
-.ground-form-container, .aeroplane-form-container {
+.ground-form-container,
+.aeroplane-form-container,
+.edit-car-container
+{
     margin: 25px;
 }
 
-.ground-line-break, .aeroplane-line-break, .dashboard-line-break, .line-break-available-offsets {
+.ground-line-break,
+.aeroplane-line-break,
+.dashboard-line-break,
+.line-break-available-offsets,
+.edit-line-break {
     border-color: #B8D93F;
 }
 
@@ -229,4 +241,19 @@ a.dashboard-aeroplane:hover {
     background-color: #FC600A;
 }
 
-/* EDIT AIR QUERY STYLESHEET */
+/* EDIT VEHICLE OFFSET STYLESHEET */
+.car-edit-form, .edit-car-title {
+    color: #B8D93F;
+}
+
+.edit-car-container {
+    margin: auto;
+}
+
+.edit-form-margin,
+.form-group,
+.edit-pg-delete-btn{
+    margin: 25px;
+}
+
+
