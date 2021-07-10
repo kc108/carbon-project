@@ -225,3 +225,8 @@ a.dashboard-aeroplane:hover {
     padding-bottom: 25px;
 }
 
+#delete-est-btn {
+    background-color: #FC600A;
+}
+
+/* EDIT AIR QUERY STYLESHEET */
