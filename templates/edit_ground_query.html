@@ -3,7 +3,7 @@
 {% block content %}
 <div class="edit-car-container">
 <h1 class="edit-car-title">{% block title %} Edit Vehicle Carbon Offset History {% endblock %}</h1>
-<hr class="edit-line-break" />
+
 <form method="post">
     <div class="form-group">
         <label class="car-edit-form" for="miles">Miles</label>
@@ -25,12 +25,11 @@
     </div>
 </form>
 
-<form class="edit-pg-delete-btn" action="{{ url_for('delete_ground_query', id=post.id) }}" method="POST">
+<form action="{{ url_for('delete_ground_query', id=post.id) }}" method="POST">
     <input type="submit" value="Delete Estimate"
-            class="btn btn-success"
-            id="car-delete-edit-pg"
+            class="btn btn-success btn-sm"
             onclick="return confirm('Are you sure you want to delete this estimate?')">
 </form>
-</div>
+
 {% endblock %}
 
