@@ -7,8 +7,8 @@
 
 <form class="aeroplane-form-container" method="post">
     <div class="form-group">
-        <label class="aeroplane-label" for="airports">Enter Comma-separated List of Airport Codes</label>
-        <input type="text" name="airports" placeholder="Example:  SFO, KEF, LAX, SFO" class="form-control"
+        <label class="aeroplane-label" for="airports">Enter Comma-separated Airport Destinations</label>
+        <input type="text" name="airports" placeholder="Ex:  SFO, KEF, LAX" class="form-control" id="placeholder-aero"
             value="{{ request.form['airports'] }}"></input>
     </div>
     <div class="form-group">

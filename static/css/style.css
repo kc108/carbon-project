@@ -132,12 +132,22 @@ nav.navbar, #navbar-bg-base {
 .new-user-label, .aeroplane-label {
     color: #B8D93F;
     font-weight: bolder;
+    font-size: 1rem;
+}
+
+.aeroplane-label {
+    font-size: 1rem;
+}
+
+#placeholder-aero {
+    font-size: 1rem;
 }
 
 /*VEHICLE OFFSET STYLING*/
 .ground-query-title, .aeroplane-title, .dashboard-title {
     color: #B8D93F;
     font-weight: bolder;
+    font-size: 1.3rem;
 }
 
 .ground-labels {
@@ -164,7 +174,11 @@ nav.navbar, #navbar-bg-base {
 .edit-car-container,
 .aeroplane-est-results-container
 {
-    margin: 25px;
+    margin: 10px;
+}
+
+.aeroplane-form-container {
+    text-align: left;
 }
 
 .ground-line-break,
@@ -192,6 +206,7 @@ nav.navbar, #navbar-bg-base {
 .car-emission-results-title {
     color: #B8D93F;
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .car-title-dashboard,
@@ -293,8 +308,12 @@ a.dashboard-aeroplane:hover {
     color: #B8D93F;
 }
 
-.edit-car-title {
+.edit-car-title, .edit-air-title {
     font-size: 1.4rem;
+}
+
+.edit-aero-title {
+    font-size: 1rem;
 }
 
 .car-edit-form {
@@ -331,6 +350,7 @@ a.dashboard-aeroplane:hover {
 .aeroplane-emission-results-show-offsets-btn2 {
     color: #B8D93F;
     margin: 33px;
+    font-size: 1.3rem;
 }
 
 .car-emission-results-city,
@@ -344,6 +364,7 @@ a.dashboard-aeroplane:hover {
 .aeroplane-emission-results-carbon-emissions {
     font-size: 1.13rem;
     line-height: 0.5em;
+    word-wrap: break-word;
 }
 
 
@@ -353,6 +374,7 @@ a.dashboard-aeroplane:hover {
 .aeroplane-emission-results-offset-cost,
 .aeroplane-emission-results-carbon-emissions {
     color: #B8D93F;
+    word-wrap: break-word;
 }
 
 
@@ -393,3 +415,4 @@ a.dashboard-aeroplane:hover {
     color: #110934;
     font-weight: bolder;
 }
+
