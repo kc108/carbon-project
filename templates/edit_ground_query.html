@@ -27,7 +27,8 @@
 
 <form action="{{ url_for('delete_ground_query', id=post.id) }}" method="POST">
     <input type="submit" value="Delete Estimate"
-            class="btn btn-success btn-sm"
+            class="btn btn-sm"
+            id="edit-delete-car-btn"
             onclick="return confirm('Are you sure you want to delete this estimate?')">
 </form>
 
