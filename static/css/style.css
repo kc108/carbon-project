@@ -90,6 +90,7 @@ button, input {
     background-color: #110934;
     border: solid #FC600A;
     width: 100%;
+    width: 100%;
     padding-bottom: 15px;
 }
 
@@ -163,10 +164,11 @@ nav.navbar, #navbar-bg-base {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 25px;
-    width: 80%;
+    width: 85%;
     min-width: 300px;
     margin: auto;
     opacity: 95%;
+    line-height: 1.6;
 }
 
 .ground-form-container,
@@ -206,35 +208,42 @@ nav.navbar, #navbar-bg-base {
 .car-emission-results-title {
     color: #B8D93F;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .car-title-dashboard,
 .aeroplane-title-dashboard,
 .dashboard-entry-vehicle-section,
 .dashboard-entry-aeroplane-section {
-    margin: 23px;
+    margin: 15px;
+    font-size: 1.3rem;
+    font-weight: bolder;
 }
 
 .content-dashboard {
-    margin: 65px;
-    border: solid #B8D93F;
-   }
+    margin: auto;
+}
 
 .dashboard-title {
-    color: #110934;
+    color: #FC600A;
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 1.8rem;
 }
 
 .car-dashboard,
 .dashboard-aeroplane {
     color: #B8D93F;
+    font-size: 1.17rem;
+    padding-bottom: 3px;
+    font-weight: bolder;
 }
 
 .dashboard-container {
-    margin-top: 150px;
     opacity: 90%;
+}
+
+.h4, h4 {
+    font-size: 1.3rem;
 }
 
 .badge-warning,
@@ -374,7 +383,9 @@ a.dashboard-aeroplane:hover {
 .aeroplane-emission-results-offset-cost,
 .aeroplane-emission-results-carbon-emissions {
     color: #B8D93F;
-    word-wrap: break-word;
+    /*width: 100%;*/
+    white-space: nowrap;
+    display: flex;
 }
 
 
@@ -383,7 +394,6 @@ a.dashboard-aeroplane:hover {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 9px;
-    width: 80%;
     min-width: 300px;
     margin: auto;
     opacity: 95%;

@@ -3,8 +3,9 @@
 {% block content %}
 <div class="dashboard-container">
     <h1 class="dashboard-title">{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
-    <hr class="dashboard-line-break"/>
+<!--    <hr class="dashboard-line-break"/>-->
     <div class="content-dashboard">
+        <hr class="dashboard-line-break"/>
         <h2 class="car-title-dashboard">Vehicle Carbon Offset History</h2>
         <hr class="dashboard-line-break car-break-line">
         {% for query in ground_queries %}
