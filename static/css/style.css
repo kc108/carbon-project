@@ -372,8 +372,10 @@ a.dashboard-aeroplane:hover {
 .aeroplane-emission-results-offset-cost,
 .aeroplane-emission-results-carbon-emissions {
     font-size: 1.13rem;
-    line-height: 0.5em;
+    line-height: 1.2rem;
     word-wrap: break-word;
+    display: inherit;
+    white-space: normal;
 }
 
 
