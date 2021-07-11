@@ -38,6 +38,8 @@ h1 {
 
 .login-title, .rem-text {
     color:#B8D93F;
+    padding-top: 9px;
+    padding-bottom: 15px;
 }
 
 .checkbox-login {
@@ -63,6 +65,13 @@ button, input {
 #navbar-color, #navbar-color-base {
     color: 110934;
     font-weight: 800;
+    font-size: 1.07rem;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    padding: 2px;
+    border: none;
 }
 
 #navbar-bg, #navbar-bg-base {
@@ -106,6 +115,9 @@ nav.navbar, #navbar-bg-base {
 .reg-title {
     color: #B8D93F;
     padding-top: 23px;
+    font-size: 1.40rem;
+    margin-left: 22px;
+    margin-bottom: 35px;
 }
 
 .new-user-btn {
@@ -113,6 +125,8 @@ nav.navbar, #navbar-bg-base {
     background-color: #FC600A;
     border-color: #FC600A;
     color: white;
+    margin-top: 15px;
+    margin-bottom: 9px;
 }
 
 .new-user-label, .aeroplane-label {
@@ -160,7 +174,8 @@ nav.navbar, #navbar-bg-base {
 .edit-line-break,
 .line-break-edit-aeroplane,
 .car-emission-results-line-break,
-.aeroplane-est-results-line-break {
+.aeroplane-est-results-line-break,
+.new-user-line-break {
     border-color: #B8D93F;
 }
 
@@ -278,6 +293,15 @@ a.dashboard-aeroplane:hover {
     color: #B8D93F;
 }
 
+.edit-car-title {
+    font-size: 1.4rem;
+}
+
+.car-edit-form {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
 .edit-car-container {
     margin: auto;
 }
@@ -363,3 +387,9 @@ a.dashboard-aeroplane:hover {
     margin: 7px;
 }
 
+/* MOBILE OPTIMIZATION */
+/* PULL-DOWN NAVBAR STYLING */
+.navlink {
+    color: #110934;
+    font-weight: bolder;
+}
