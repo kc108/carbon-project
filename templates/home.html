@@ -7,42 +7,46 @@
     <div class="content-dashboard">
         <hr class="dashboard-line-break"/>
         <h2 class="car-title-dashboard">Vehicle Carbon Offset History</h2>
+        <a href="/ground_query" class="badge badge-warning m-l" id="add-offset-btn1">Vehicle Carbon Offset</a>
         <hr class="dashboard-line-break car-break-line">
         {% for query in ground_queries %}
         <div class="dashboard-entry-vehicle-section">
             <a class="car-dashboard" href="{{ url_for('show_ground_query', query_id=query['id']) }}">
                 <h4 class="car-dashboard">{{ query.city }}: {{query.mpg}} MPG for {{query.miles}} miles</h4>
                 <div class="car-dashboard">{{ query.created }}</div>
-            <a href="{{ url_for('edit_ground_query', id=query.id) }}">
-                <button class="badge badge-warning" id="dash-btn1">Edit</button>
             </a>
-            <a href="{{ url_for('delete_ground_query', id=query.id) }}">
-                <button class="badge badge-warning" id="dash-btn2">Delete</button>
+
+            <a class="badge badge-warning" id="car-edit-btn" href="{{ url_for('edit_ground_query', id=query.id) }}">
+                Edit
+            </a>
+
+            <a class="badge badge-warning" id="car-delete-btn" href="{{ url_for('delete_ground_query', id=query.id) }}">
+                Delete
             </a>
         </div>
-            <hr class="dashboard-line-break">
-
+        <hr class="dashboard-line-break" />
     {% endfor %}
 
     <h2 class="aeroplane-title-dashboard">Air Travel Offset History</h2>
-    <hr class="dashboard-line-break">
+    <a href="/air_query" class="badge badge-warning m-l" id="add-offset-btn">Air Carbon Offset</a>
     {% for query in air_queries %}
-
+    <hr class="dashboard-line-break">
     <div class="dashboard-entry-aeroplane-section">
         <a class="dashboard-aeroplane" href="{{ url_for('show_air_query', query_id=query['id']) }}">
             <h4 class="dashboard-aeroplane">{{ query.list_airports() }}</h4>
             <div class="dashboard-aeroplane">{{ query.created }}</div>
         </a>
-        <a class="air-dashboard" href="{{ url_for('edit_air_query', id=query.id) }}">
-            <button class="badge badge-warning" id="dash-btn3">Edit</button>
+        <a class="badge badge-warning air-dashboard" id="edit-air-btn" href="{{ url_for('edit_air_query', id=query.id) }}">
+            Edit
         </a>
-        <a href="{{ url_for('delete_air_query', id=query.id) }}">
-            <button class="badge" id="dash-btn4">Delete</button>
+        <a class="badge" id="delete-air-btn" href="{{ url_for('delete_air_query', id=query.id) }}">
+            Delete
         </a>
         </div>
-        </a>
+
 
     {% endfor %}
+
     </div>
 </div>
 {% endblock %}

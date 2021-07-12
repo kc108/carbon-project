@@ -30,7 +30,11 @@ h1 {
 #car-delete-edit-pg,
 #edit-submit-aero-btn,
 #delete-est-btn-airplane,
-#edit-delete-car-btn {
+#edit-delete-car-btn,
+#car-edit-btn,
+#car-delete-btn,
+#edit-air-btn,
+#delete-air-btn {
     color: #fff;
     background-color: #FC600A;
     border-color: #FC600A;
@@ -38,8 +42,19 @@ h1 {
 }
 
 /* EDIT: CAR PAGE */
-#edit-delete-car-btn
+#edit-delete-car-btn {
     margin-left: 25px;
+}
+
+#car-edit-btn,
+#car-delete-btn,
+#edit-air-btn,
+#delete-air-btn {
+    padding: 7px;
+}
+
+#car-delete-btn {
+
 }
 
 #login-title, #rem-text {
@@ -69,7 +84,7 @@ button, input {
 
 /* NAV BAR PROPERTIES FOR TITLE*/
 #navbar-color, #navbar-color-base {
-    color: 110934;
+    color: #110934;
     font-weight: 800;
     font-size: 1.07rem;
 }
@@ -197,8 +212,7 @@ nav.navbar, #navbar-bg-base {
 .line-break-edit-aeroplane,
 .car-emission-results-line-break,
 .aeroplane-est-results-line-break,
-.new-user-line-break,
-{
+.new-user-line-break {
     border-color: #B8D93F;
 }
 
@@ -221,6 +235,23 @@ hr {
     color: #B8D93F;
     font-weight: bold;
     font-size: 1.4rem;
+}
+
+#add-offset-btn {
+    padding: 9px;
+    background-color: #B8D93F;
+    color: #110934;
+    font-weight: bolder;
+    font-size: 0.9rem;
+}
+
+
+#add-offset-btn1 {
+    padding: 9px;
+    background-color: #B8D93F;
+    color: #110934;
+    font-weight: bolder;
+    font-size: 0.9rem;
 }
 
 .car-title-dashboard,
@@ -427,10 +458,11 @@ a.dashboard-aeroplane:hover {
     background-color: #4424D6;
     padding-bottom: 25px;
     padding-top: 9px;
-    width: 100%
+    width: 100%;
     min-width: 300px;
     margin: auto;
     opacity: 95%;
+}
 
 #car-carbon-show-offsets {
     margin: 23px;
@@ -493,3 +525,7 @@ color: #B8D93F;
 /*#rest-pg-container-format {*/
 /*   color: white;*/
 /*}*/
+
+.m-l {
+    margin-left: 15px;
+}
