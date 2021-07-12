@@ -3,7 +3,6 @@
 {% block content %}
 <div class="dashboard-container">
     <h1 class="dashboard-title">{% block title %} {{ user.full_name }}'s Dashboard {% endblock %}</h1>
-<!--    <hr class="dashboard-line-break"/>-->
     <div class="content-dashboard">
         <hr class="dashboard-line-break"/>
         <h2 class="car-title-dashboard">Vehicle Carbon Offset History</h2>
@@ -28,7 +27,7 @@
     {% endfor %}
 
     <h2 class="aeroplane-title-dashboard">Air Travel Offset History</h2>
-    <a href="/air_query" class="badge badge-warning m-l" id="add-offset-btn">Air Carbon Offset</a>
+        <div class="space1"><a href="/air_query" class="badge badge-warning m-l" id="add-offset-btn">Air Carbon Offset</a></div>
     {% for query in air_queries %}
     <hr class="dashboard-line-break">
     <div class="dashboard-entry-aeroplane-section">

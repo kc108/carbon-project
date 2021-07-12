@@ -5,18 +5,23 @@
     <div class="rest-pg-container">
         <h2 class="rest-pg-content" id="offset-title">{% block title %} {{ slug.name }} {% endblock %}</h2>
         <hr>
+        <div class="space"></div>
         <p class="rest-pg-content" id="rest-pg-content-city">City: {{ slug.city }}</p>
         <p class="rest-pg-content">Province: {{ slug.province }}</p>
         <p class="rest-pg-content">Country: {{ slug.country }}</p>
-        <p class="rest-pg-content">Type:   {{ slug.offset_type }}</p>
+        <p class="rest-pg-content">Type: {{ slug.offset_type }}</p>
         <p class="rest-pg-content">TOTAL CAPACITY: {{ slug.total_capcity }}</p>
-        <pclass="rest-pg-content">AVAIL CAPACITY: {{ slug.available_carbon_in_kg }}kg</p>
+        <p class="rest-pg-content">AVAIL CAPACITY: {{ slug.available_carbon_in_kg }}kg</p>
 
-        <h3class="rest-pg-content">Details</h3>
+        <h3 class="rest-pg-content">Details</h3>
         <hr>
-        {{ slug.technical_details }}
+        <div class="space"></div>
+        <p>
+            {{ slug.technical_details }}
+        </p>
         <hr>
-        <p class="rest-pg-content"><a id="offset-info-link" class="rest-pg-container" href="{{ slug.pretty_url }}">Link to Offset</a></p>
+        <div class="space"></div>
+        <div><a id="offset-info-link" href="{{ slug.pretty_url }}">Link to Offset</a></div>
     </div>
 </div>
 {% endblock %}
