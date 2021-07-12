@@ -100,9 +100,8 @@ button, input {
 
 .nav-link:hover {
     text-decoration: solid underline #FC600A;
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 8px;
     font-weight: bolder;
-
 }
 
 .bg-light {
