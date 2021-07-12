@@ -98,6 +98,13 @@ button, input {
     border: ridge #FC600A;
 }
 
+.nav-link:hover {
+    text-decoration: solid underline #FC600A;
+    text-decoration-thickness: 4px;
+    font-weight: bolder;
+
+}
+
 .bg-light {
     background-color: #B8D93F;
 }
