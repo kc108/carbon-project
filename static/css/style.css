@@ -57,9 +57,16 @@ h1 {
 }
 
 #login-title, #rem-text {
-    color:#B8D93F;
+    color:#FC600A;
     padding-top: 9px;
     padding-bottom: 15px;
+}
+
+h4#login-title {
+    color: #FC600A;
+    text-align: center;
+    padding-top: 22px;
+    font-weight: bold;
 }
 
 .checkbox-login {
@@ -145,6 +152,7 @@ nav.navbar, #navbar-bg-base {
     font-size: 1.40rem;
     margin-left: 22px;
     margin-bottom: 35px;
+    font-weight: bolder;
 }
 
 .new-user-btn {
@@ -219,9 +227,6 @@ nav.navbar, #navbar-bg-base {
     border-color: #B8D93F;
     position: absolute;
     width: 85%;
-    /*padding-top: 115px;*/
-    /*left: 0;*/
-    /*margin: 0;*/
 }
 
 .aeroplane-est-results-line-break,
@@ -233,7 +238,6 @@ hr {
     border-color: #B8D93F;
     position: absolute;
     margin: auto;
-
 }
 
 .space {
@@ -245,6 +249,7 @@ hr {
     padding-bottom: 9px;
     color: #B8D93F;
 }
+
 
 /* DASHBOARD STYLING */
 .car-title-dashboard,
@@ -308,9 +313,33 @@ hr {
     opacity: 90%;
 }
 
+.col-center {
+    margin-left: 23px;
+    justify-content: left;
+}
 
-h4#login-title, div.rem-text {
+
+#login-title, div.rem-text {
+    color: #FC600A;
+}
+
+.subtitle-sizing {
+    font-size: 0.9rem;
+    color: #FC600A;
+    margin-bottom: 35px;
+}
+
+.rec-paragraph {
     color: #B8D93F;
+    line-height: 1.8rem;
+    font-weight: bolder;
+}
+
+.padding-top {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #FC600A;
 }
 
 .badge-warning,
