@@ -2,32 +2,43 @@
 
 {% block content %}
 <div class="column is-4 is-offset-4">
-    <h4 class="title" id="login-title">Log In</h4>
+
     <div class="box">
-        <form class="login-form" method="POST" action="/login">
-            <div class="field">
-                <div class="control">
-                    <input class="placeholder-margin input is-large login-border-radius" type="email" name="email" placeholder="Email" autofocus="">
-                </div>
-            </div>
-<!--<style>-->
-<!--    #login-btn{background-color: #4424D6}-->
-<!--</style>-->
-            <div class="field">
-                <div class="control">
-                    <input class="placeholder-margin input is-large login-border-radius" type="password" name="pass" placeholder="Password">
-                </div>
-            </div>
-            <div class="field">
-                <label class="checkbox">
-                    <div class="rem-text">
-                        <input class="checkbox-login" type="checkbox" name="remember">
-                        Remember me
+        <div class="row">
+            <div class="col-md-4 card">
+                <h4 class="title" id="login-title">Log In</h4>
+                <form class="login-form card-body" method="POST" action="/login">
+                    <div class="field">
+                        <div class="control">
+                            <input class="placeholder-margin input is-large login-border-radius" type="email"
+                                   name="email" placeholder="Email" autofocus="">
+                        </div>
                     </div>
-                </label>
+                    <div class="field">
+                        <div class="control">
+                            <input class="placeholder-margin input is-large login-border-radius" type="password"
+                                   name="pass" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="checkbox">
+                            <div class="rem-text">
+                                <input class="checkbox-login" type="checkbox" name="remember">
+                                Remember me
+                            </div>
+                        </label>
+                    </div>
+                    <p>No Account Yet? <a href="/create_user">Sign up.</a></p>
+                    <button id="login-btn" class="button btn btn-primary">Log In</button>
+                </form>
             </div>
-            <button id="login-btn" class="button btn btn-primary">Log In</button>
-        </form>
+            <div class="col">
+                <h2>Renewable Energy Credits</h2>
+                <p>[[lorem.row(3).loop(2)]]</p>
+            </div>
+        </div>
+
+
     </div>
 </div>
 {% endblock %}
