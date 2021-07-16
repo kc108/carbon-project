@@ -563,3 +563,8 @@ color: #B8D93F;
 #delete-est-btn-airplane {
     padding: 5px;
 }
+@media (max-width: 767px) {
+    .aeroplane-emission-results-title, .aeroplane-emission-results-destinations, .aeroplane-emission-results-offset-cost, .aeroplane-emission-results-carbon-emissions{
+        white-space: break-spaces;
+    }
+}
