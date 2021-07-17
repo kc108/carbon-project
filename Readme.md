@@ -1,36 +1,61 @@
 # Overview
 A web application to offset ground or air transportation. Enter your mileage and miles per gallon, and zip code. This will then display a list of offsets and more details about them. A user can then go to those sites and purchase to drawdown carbon and mitigate their personal carbon footprint. On the "list offsets" page you can filter by the type of offset you would like (for example, solar, wind, forest management, etc).
 
-This would be a great B2B integration into a business trying to bring awareness and practical solutions to the effects of climate change.
+This could be used as a personal application or for B2B purposes, especially of an organization  working to integrate  practical solutions to the effects of climate change. 
 
 ---
 # Technologies Used
 - Python
 - Jinja (template engine)
 - Flask
-- SQL
+- SQL Alchemy
 - POSTGRESQL
 - JavaScript
 - CSS
 - HTML
 
 ---
-# Screenshots
-
-
-
-
-
-
-
-
-
-
-
-
----
 # Models
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    full_name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    passwd TEXT NOT NULL,
+    token TEXT NOT NULL
+);
 
+CREATE TABLE ground_queries (
+    id SERIAL PRIMARY KEY,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    email TEXT NOT NULL,
+    miles FLOAT NOT NULL,
+    mpg FLOAT NOT NULL,
+    city TEXT NOT NULL,
+    results TEXT NOT NULL
+);
+
+CREATE TABLE air_queries (
+    id SERIAL PRIMARY KEY,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    email TEXT NOT NULL,
+    airport_list TEXT NOT NULL,
+    results TEXT NOT NULL
+);
+
+CREATE TABLE offsets (
+    id SERIAL PRIMARY KEY,
+    offset_name TEXT NOT NULL,
+    slug TEXT NOT NULL,
+    city TEXT NOT NULL,
+    province TEXT NOT NULL,
+    country TEXT NOT NULL,
+    offset_type TEXT NOT NULL,
+    total_capacity TEXT NOT NULL,
+    avail_capacity TEXT NOT NULL,
+    details TEXT NOT NULL,
+    pretty_url TEXT NOT NULL
+);
 
 # Installation
 
