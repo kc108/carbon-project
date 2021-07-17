@@ -318,6 +318,11 @@ hr {
     justify-content: left;
 }
 
+.col-md-4 {
+    background-color: white;
+    opacity: 80%;
+}
+
 
 #login-title, div.rem-text {
     color: #FC600A;
