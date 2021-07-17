@@ -8,7 +8,8 @@ This would be a great B2B integration into a business trying to bring awareness 
 - Python
 - Jinja (template engine)
 - Flask
-- SQL/POSTGRESQL
+- SQL
+- POSTGRESQL
 - JavaScript
 - CSS
 - HTML
