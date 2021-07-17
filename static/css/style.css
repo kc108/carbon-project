@@ -121,7 +121,7 @@ button, input {
 
 .nolog-bg-img {
     background-color: #110934;
-    border: solid #FC600A;
+    border: solid #FC600A 3px;
     width: 100%;
     width: 100%;
     padding-bottom: 15px;
